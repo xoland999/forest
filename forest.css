@@ -1,0 +1,102 @@
+#veuApp {
+    background-color: whitesmoke;
+    margin: 0, auto;
+}
+
+#header {
+    text-align: center;
+}
+
+#exampleBG {
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.example {
+    border: solid;
+    flex: 1;
+    margin: auto 30px;
+}
+
+#state1, .state1 {
+    background-color: green;
+}
+
+#state2, .state2 {
+    background-color: greenyellow;
+}
+
+#state3, .state3 {
+    background-color: yellow;
+}
+
+#state4, .state4 {
+    background-color: orange;
+}
+
+#state5, .state5 {
+    background-color: red;
+}
+
+#state6, .state6 {
+    background-color: pink;
+}
+
+#objList {
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    /* justify-content: space-around; */
+}
+
+#objBG {
+    text-align: center;
+    width: 20%;
+    height: 25%;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 0.25rem;
+    margin: 10px auto;
+}
+
+#obj-header {
+    /* background-color: yellowgreen; */
+    opacity: 0.80;
+}
+
+p {
+    margin: 0px;
+}
+
+.lookAt {
+    text-align: center;
+}
+
+button {
+    background-color: coral;
+}
+
+@media screen and ( max-width:1280px ) {
+    #objBG {
+        width: 25%;
+        height: 45%;
+    }
+}
+
+@media screen and ( max-width:800px ) {
+    .example {
+        border: solid;
+        flex: 1;
+        width: 50%;
+        margin: 1px 2px;
+    }
+
+    #objBG {
+        width: 45%;
+        height: 45%;
+    }
+
+}
+
+
+

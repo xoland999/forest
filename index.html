@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全國林火預警</title>
+
+    <link rel="stylesheet" type="text/css" href="forest.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="vueApp">
+        <div id="header">
+            <h1>林火預警資料</h1>
+            <div class="ref">資料來源：
+            <a href="https://opendata.epa.gov.tw/Data/Contents/AQI/" target="_blank">行政院環境保護署 - 環境資源資料開放平臺</a>
+            </div>
+            <h4>危險度分級圖示</h4>
+            <div id="exampleBG">
+                <div class="example" id="state1"><p>安全級</p></div>
+                <div class="example" id="state2"><p>注意級</p></div>
+                <div class="example" id="state3"><p>警告級</p></div>
+                <div class="example" id="state4"><p>危險級</p></div>
+                <div class="example" id="state5"><p>最危險級</p></div>
+                <div class="example" id="state6"><p>無資料</p></div>
+            </div>
+        </div>
+        <hr>
+            <h4 class="lookAt">關注監測站
+                <button type="button" class="btn" @click="clearStar()">清除所有關注</button>
+            </h4>
+            
+            <div id="objList">
+                <each-data v-for="(data, key) in selectedData" :input-Data='data' :key="key" @star='starArray'></each-data>
+            </div>
+        <hr>
+            <div id="objList">
+                <each-data v-for="(data, key) in datasJson" :input-Data='data' :key="key" @star='starArray'></each-data>
+            </div>
+    </div>
+
+    <script src="forest.js"></script>
+</body>
+</html>
